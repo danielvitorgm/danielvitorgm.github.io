@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "CommuterSans";
+    src: url("./fonts//Fontspring-DEMO-commuterssans-light.otf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+:root{
+    --commuter-sans-font: "CommuterSans";
+    --montserrat-font: "Montserrat";
+
+    --white: white;
+    --black: #151515;
+    --dark-charcoal: #1a1a1a;
+    --light-charcoal: #242424;
+    --grey: #8c8c8c;
+    --light-grey: #acacac;
+    --red: #cb0000;
+    --pink: #cb0c54;
+    --gradient: linear-gradient(90deg, var(--pink), var(--red));
+
+    --scrollbar-width: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 800px;
+}
+
+section.dark-charcoal{
+    background-color: var(--dark-charcoal);
+}
+
+section.black{
+    background-color: var(--black);
+}
+
+section.bg1,
+section.bg4,
+section.bg5{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.bg1{
+    --proportion: calc(1074 / 1920); 
+
+    height: calc((100vw - var(--scrollbar-width)) * var(--proportion));
+    width: calc(100vw - var(--scrollbar-width));
+    background-image: url("./images/Fundo.sessão1.webp");
+}
+
+section.bg4{
+    --proportion: calc(1509 / 1920);
+
+    height: calc((100vw - var(--scrollbar-width)) * var(--proportion));
+    width: calc(100vw - var(--scrollbar-width));
+    background-image: url("./images/Fundo\ sessaÌo\ 4.webp");
+}
+
+section.bg5{
+    --proportion: calc(1293 / 2066);
+
+    height: calc((100vw - var(--scrollbar-width)) * var(--proportion));
+    width: calc(100vw - var(--scrollbar-width));
+    background-image: url("./images/Fundo.sessão5.webp");
+}
+
+@media only screen and (max-width: 800px) {
+    section.bg1{
+        --proportion: calc(590 / 800);
+        background-image: url("./images/Fundo.\ sessão1.mobile.webp")
+    }
+
+    section.bg4{
+        --proportion: calc(1658 / 800);
+        background-image: url("./images/Fundo.\ sessão4.mobile.webp");
+    }
+
+    section.bg5{
+        --proportion: calc(2635 / 800);
+        background-image: url("./images/Fundo.\ sessão5.mobile.webp");
+    }
+}
