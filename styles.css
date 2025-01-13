@@ -31,8 +31,31 @@
     padding: 0;
 }
 
+.white-text{
+    color: var(--white);
+}
+
+.grey-text{
+    color: var(--grey);
+}
+
+.gradient-text{
+    background-clip: text;
+    background-image: var(--gradient);
+    color: transparent;
+}
+
+.commuter-sans{
+    font-family: var(--commuter-sans-font);
+}
+
+.montserrat{
+    font-family: var(--montserrat-font);
+    font-weight: 300;
+}
+
 section{
-    height: 800px;
+    padding: 0 16%;
 }
 
 section.dark-charcoal{
@@ -75,7 +98,99 @@ section.bg5{
     background-image: url("./images/Fundo.sessão5.webp");
 }
 
+section.third-section{
+    padding-top: 400px;
+    padding-bottom: 100px;
+}
+
+div.skill-block{
+    border-bottom: 2px solid var(--light-charcoal);
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+}
+
+h2.block-title{
+    font-size: 2em;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+h3.block-subtitle{
+    margin-bottom: 20px;
+}
+
+div.card-grid{
+    --column-gap: 50px;
+    --row-gap: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+}
+
+div.card{
+    background-color: var(--dark-charcoal);
+    border-radius: 5px;
+    border: 2px solid var(--light-charcoal);
+    height: 250px;
+    padding: 40px 35px;
+    transition: background-color .3s ease-in-out;
+}
+
+div.card:hover{
+    background-color: var(--light-charcoal);
+}
+
+div.card > div.images{
+    display: flex;
+}
+
+div.card > div.images > img{
+    --size: 50px;
+
+    background-color: var(--dark-charcoal);
+    border: 1px solid var(--light-charcoal);
+    border-radius: 5px;
+    height: var(--size);
+    width: var(--size);
+}
+
+div.card > div.images > img:not(:last-child){
+    margin-right: 10px;
+}
+
+div.card > h4.card-title{
+    line-height: 2em;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+div.card > p.card-text{
+    font-size: .8em;
+    line-height: 2em;
+}
+
+div.card-grid-3{
+    --column-gap: 50px;
+    --row-gap: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+}
+
 @media only screen and (max-width: 800px) {
+
+    :root{
+        --card-text-max-width: 250px;
+    }
+
+    section{
+        padding: 0 50px;
+    }
+
     section.bg1{
         --proportion: calc(590 / 800);
         background-image: url("./images/Fundo.\ sessão1.mobile.webp")
@@ -89,5 +204,18 @@ section.bg5{
     section.bg5{
         --proportion: calc(2635 / 800);
         background-image: url("./images/Fundo.\ sessão5.mobile.webp");
+    }
+
+    div.card-grid,
+    div.card-grid-3{
+        grid-template-columns: 1fr;
+    }
+
+    div.card > h4.card-title{
+        max-width: var(--card-text-max-width);
+    }
+
+    div.card > p.card-text{
+        max-width: var(--card-text-max-width);
     }
 }
