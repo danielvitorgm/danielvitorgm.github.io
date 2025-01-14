@@ -181,6 +181,40 @@ div.card-grid-3{
     row-gap: var(--row-gap);
 }
 
+div.company-images{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    transform: translateY(340%);
+}
+
+div.company-images > img{
+    height: 63px;
+}
+
+div.about-me-card{
+    background-color: var(--light-charcoal);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px 60px 40px;
+    transform: translateY(50%);
+}
+
+div.about-me-card > div.card-text,
+div.about-me-card > img{
+    width: 40%;
+}
+
+div.about-me-card > div.card-text > h3.card-title{
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+div.about-me-card > div.card-text > p.card-description{
+    line-height: 2em;
+}
+
 @media only screen and (max-width: 800px) {
 
     :root{
@@ -206,6 +240,20 @@ div.card-grid-3{
         background-image: url("./images/Fundo.\ sessão5.mobile.webp");
     }
 
+    div.skill-block{
+        margin-top: 500px;
+    }
+
+    div.skill-block > h2.block-title{
+        font-size: 4em;
+    }
+
+    div.skill-block > h3.block-subtitle{
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
     div.card-grid,
     div.card-grid-3{
         grid-template-columns: 1fr;
@@ -217,5 +265,28 @@ div.card-grid-3{
 
     div.card > p.card-text{
         max-width: var(--card-text-max-width);
+    }
+
+    div.about-me-card{
+        flex-direction: column;
+        padding: 80px 50px 50px 50px;
+    }
+
+    div.about-me-card > div.card-text,
+    div.about-me-card > img{
+        width: 100%;
+    }
+
+    div.about-me-card > div.card-text > h3.card-title,
+    div.about-me-card > div.card-text > p.card-description{
+        text-align: center;
+    }
+
+    div.about-me-card > div.card-text > h3.card-title{
+        font-size: 4em;
+    }
+
+    div.about-me-card > div.card-text > p.card-description{
+        margin-bottom: 50px;
     }
 }
