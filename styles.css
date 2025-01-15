@@ -103,6 +103,10 @@ section.third-section{
     padding-bottom: 100px;
 }
 
+section.fourth-section{
+    padding-top: 120px;
+}
+
 div.skill-block{
     border-bottom: 2px solid var(--light-charcoal);
     margin-bottom: 80px;
@@ -215,10 +219,45 @@ div.about-me-card > div.card-text > p.card-description{
     line-height: 2em;
 }
 
+div.graduation-block{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.graduation-block > div.graduation-description,
+div.graduation-block > img{
+    --space-between-blocks: 50px;
+    width: calc(50% - var(--space-between-blocks) / 2);
+}
+
+div.graduation-block > div.graduation-description > div.graduation-division > h3.graduation-title{
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+div.graduation-block > div.graduation-description > div.graduation-division > div.graduation-card{
+    background-color: var(--dark-charcoal);
+    border-radius: 5px;
+    border: 2px solid var(--light-charcoal);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    font-size: .9em;
+}
+
+div.graduation-block > div.graduation-description > div.graduation-division > div.graduation-card > h4.card-title{
+    margin-bottom: 15px;
+}
+
+div.graduation-block > div.graduation-description > div.graduation-division:not(:last-child){
+    margin-bottom: 50px;
+}
+
 @media only screen and (max-width: 800px) {
 
     :root{
         --card-text-max-width: 250px;
+        --section-title-font-size: 4em;
     }
 
     section{
@@ -245,7 +284,7 @@ div.about-me-card > div.card-text > p.card-description{
     }
 
     div.skill-block > h2.block-title{
-        font-size: 4em;
+        font-size: var(--section-title-font-size);
     }
 
     div.skill-block > h3.block-subtitle{
@@ -283,10 +322,26 @@ div.about-me-card > div.card-text > p.card-description{
     }
 
     div.about-me-card > div.card-text > h3.card-title{
-        font-size: 4em;
+        font-size: var(--section-title-font-size);
     }
 
     div.about-me-card > div.card-text > p.card-description{
         margin-bottom: 50px;
+    }
+
+    section.fourth-section > h2{
+        font-size: var(--section-title-font-size);
+    }
+
+    div.graduation-block > img{
+        display: none;
+    }
+
+    div.graduation-block > div.graduation-description{
+        width: 100%;
+    }
+
+    div.graduation-block > div.graduation-description > div.graduation-division > h3.graduation-title{
+        text-align: center;
     }
 }
