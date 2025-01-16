@@ -243,6 +243,11 @@ div.graduation-block > div.graduation-description > div.graduation-division > di
     padding: 20px 30px;
     margin-bottom: 10px;
     font-size: .9em;
+    transition: background-color .3s ease-in-out;
+}
+
+div.graduation-block > div.graduation-description > div.graduation-division > div.graduation-card:hover{
+    background-color: var(--light-charcoal);
 }
 
 div.graduation-block > div.graduation-description > div.graduation-division > div.graduation-card > h4.card-title{
