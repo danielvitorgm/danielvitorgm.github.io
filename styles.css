@@ -102,6 +102,13 @@ section.bg5{
     background-image: url("./images/Fundo.sessão5.webp");
 }
 
+section.first-section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 170px;
+}
+
 section.third-section{
     padding-top: 400px;
     padding-bottom: 100px;
@@ -291,6 +298,30 @@ div.sets-apart-container > div.sets-apart-list > ul > li{
     line-height: 2em;
     list-style: none;
     margin-bottom: 40px;
+}
+
+span.presentation-tag{
+    background-color: var(--light-charcoal);
+    border-radius: 5px;
+    padding: 5px 30px;
+    margin-bottom: 50px;
+}
+
+section.first-section > h2.block-title{
+    margin-bottom: 30px;
+    width: 500px;
+}
+
+section.first-section > p.presentation-paragraph{
+    width: 400px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 2em;
+}
+
+section.first-section > p.presentation-small{
+    font-size: .5em;
+    text-transform: uppercase;
 }
 
 @media only screen and (max-width: 800px) {
