@@ -97,9 +97,10 @@ section.bg4{
 section.bg5{
     --proportion: calc(1293 / 2066);
 
-    height: calc((100vw - var(--scrollbar-width)) * var(--proportion));
+    min-height: calc((100vw - var(--scrollbar-width)) * var(--proportion));
     width: calc(100vw - var(--scrollbar-width));
     background-image: url("./images/Fundo.sessão5.webp");
+    padding-bottom: 80px;
 }
 
 section.first-section{
@@ -324,6 +325,91 @@ section.first-section > p.presentation-small{
     text-transform: uppercase;
 }
 
+.professional-experience-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 60px;
+}
+
+.professional-experience-grid > .professional-experience-card.horizontal{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.professional-experience-card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-charcoal);
+    border-radius: 5px;
+    border: 2px solid var(--light-charcoal);
+    padding: 40px 35px;
+    transition: background-color .3s ease-in-out;
+}
+
+.professional-experience-card:hover{
+    background-color: var(--light-charcoal);
+}
+
+.professional-experience-card.horizontal{
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.professional-experience-card > .card-header,
+.professional-experience-card > .card-body{
+    height: 40%;
+}
+
+.professional-experience-card:not(.horizontal) > .card-header,
+.professional-experience-card:not(.horizontal) > .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+}
+
+.professional-experience-card.horizontal > .card-header,
+.professional-experience-card.horizontal > .card-body{
+    width: 40%;
+}
+
+.professional-experience-card.horizontal > .card-body{
+    margin-top: 30px;
+}
+
+.professional-experience-card > .separator{
+    width: 80px;
+    height: 1px;
+    background-color: var(--grey);
+    margin: 70px 0 35px 0;
+}
+
+.professional-experience-card.horizontal > .separator{
+    align-self: center;
+    height: 80px;
+    width: 1px;
+    background-color: var(--grey);
+    margin: 0 auto;
+}
+
+.professional-experience-card > .card-header > img{
+    height: 50px;
+    margin-bottom: 60px;
+}
+
+.professional-experience-card > .card-header > h3.professional-experience-card-title{
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.professional-experience-card > .card-body > ul > li{
+    list-style: none;
+    line-height: 2em;
+    margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 800px) {
 
     :root{
@@ -442,5 +528,34 @@ section.first-section > p.presentation-small{
         text-align: center;
     }
 
-    
+    .professional-experience-grid{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 1fr;
+        row-gap: 60px;
+    }
+
+    .professional-experience-grid > .professional-experience-card.horizontal{
+        grid-column-start: unset;
+        grid-column-end: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .professional-experience-grid > .professional-experience-card.horizontal > .card-header,
+    .professional-experience-grid > .professional-experience-card.horizontal > .card-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+    }
+
+    .professional-experience-card.horizontal > .separator{
+        align-self: unset;
+        width: 80px;
+        height: 1px;
+        background-color: var(--grey);
+        margin: 70px 0 35px 0;
+    }
 }
