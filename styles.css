@@ -62,11 +62,16 @@ section{
     padding: 0 16%;
 }
 
+footer{
+    padding: 200px 16% 40px 16%;
+}
+
 section.dark-charcoal{
     background-color: var(--dark-charcoal);
 }
 
-section.black{
+section.black,
+footer.black{
     background-color: var(--black);
 }
 
@@ -422,6 +427,62 @@ a.contact{
     margin-bottom: 20px;
 }
 
+footer > .separator{
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey);
+    margin: 40px 0;
+}
+
+footer > .information-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .information-container > .information-column{
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .information-container > .information-column > img{
+    margin-bottom: 50px;
+    width: 200px;
+}
+
+
+footer > .information-container > .information-column > p{
+    width: 300px;
+}
+
+footer > .information-container > .information-column > a{
+    margin-bottom: 20px;
+}
+
+footer > .information-container > .information-column > a,
+footer > .legal-information > a{
+    text-decoration: none;
+}
+
+footer > .legal-information{
+    display: flex;
+    align-items: center;
+}
+
+footer > .legal-information > #copyright{
+    margin-right: auto;
+}
+
+footer > .legal-information > .separator{
+    margin: 0 20px;
+    height: 20px;
+    width: 1px;
+    background-image: var(--gradient);
+}
+
+a.active{
+    color: var(--light-grey);
+}
+
 @media only screen and (max-width: 800px) {
 
     :root{
@@ -569,5 +630,46 @@ a.contact{
         height: 1px;
         background-color: var(--grey);
         margin: 70px 0 35px 0;
+    }
+
+    footer{
+        align-items: center;
+        padding: 200px 50px 40px 50px;
+    }
+
+    footer > .information-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > .information-container > .information-column{
+        align-items: center;
+    }
+
+    footer > .information-container > .information-column > p{
+        width: 250px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer > .legal-information{
+        flex-wrap: wrap;
+    }
+
+    footer > .legal-information > #copyright{
+        margin-right: unset;
+        width: 100%;
+        order: 3;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    footer > .legal-information > a {
+        margin-left: auto;
+    }
+
+    footer > .legal-information > a + .separator + a {
+        margin-left: unset;
+        margin-right: auto;
     }
 }
