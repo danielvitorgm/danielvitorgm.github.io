@@ -483,6 +483,73 @@ a.active{
     color: var(--light-grey);
 }
 
+nav{
+    background-color: var(--light-charcoal);
+    width: 68%;
+    position: fixed;
+    left: 16%;
+    top: 50px;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+nav > img{
+    height: 25px;
+}
+
+nav > .menu-container{
+    flex-grow: 1;
+}
+
+nav > .menu-container > .menu-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav > .menu-container > .menu-options > .divisor{
+    height: 10px;
+    width: 1px;
+    background-color: var(--grey);
+}
+
+nav > input{
+    display: none;
+}
+
+nav > .menu-container > .menu-options > a{
+    text-decoration: none;
+    font-size: .8em;
+}
+
+nav > a.contact{
+    margin-bottom: 0;
+    width: 150px;
+    height: 40px;
+}
+
+nav > label{
+    display: none;
+    margin-left: auto;
+    margin-right: 15px;
+    height: 40px;
+    width: 40px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+nav > label > div{
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--light-grey);
+}
+
 @media only screen and (max-width: 800px) {
 
     :root{
@@ -671,5 +738,52 @@ a.active{
     footer > .legal-information > a + .separator + a {
         margin-left: unset;
         margin-right: auto;
+    }
+
+    nav > label{
+        display: flex;
+    }
+
+    nav > input:not(:checked) + .menu-container{
+        display: none;
+    }
+
+    nav > .menu-container{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    nav > .menu-container > .backdrop{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    nav > .menu-container > .menu-options{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--light-charcoal);
+        padding-top: 20px;
+        justify-content: flex-start;
+    }
+
+    nav > .menu-container > .menu-options > a{
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    nav > .menu-container > .menu-options > .divisor{
+        display: none;
     }
 }
